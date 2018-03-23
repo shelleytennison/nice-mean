@@ -22,7 +22,7 @@ def describe_game(name):
         stop = True
         while stop:
             if name == "":
-                name = raw_input("\nWhat is your name? ").capitalize()
+                name = input("\nWhat is your name? ".capitalize())
                 if name !="":
                     print("\nWelcome, {}!".format(name))
                     print("\nIn this game, you will be greated by several different people. \nYou can be nice or mean.")
@@ -34,7 +34,7 @@ def nice_mean(nice,mean,name):
     stop = True
     while stop:
         show_score(nice,mean,name)
-        pick = raw_input("\nA stranger approaches you for a conversation. \nWill you be nice or mean? n/m: ").lower()
+        pick = input("\nA stranger approaches you for a conversation. \nWill you be nice or mean? n/m: ").lower()
         if pick == "n":
             print("They smile, wave, and walk away...")
             nice = (nice + 1)
